@@ -5,131 +5,164 @@
 
 export const profile = {
   name: 'Subrhamanyam Bhattaram',
-  fullName: 'Subrhamanyam (B.V.S.) Bhattaram',
+  fullName: 'Subrhamanyam (B.V.S) Bhattaram',
   initials: 'SB',
-  badge: 'Available for Opportunities',
+  badge: 'Open to Web Developer Internships',
+  openTo: 'Web Developer Internships – On-site & Hybrid',
   roles: [
     'Front-End Web Developer',
     'AI & ML Undergraduate',
     'Prompt Engineering Specialist',
-    'Modern UI & React Explorer'
+    'JavaScript & UI Developer'
   ],
   location: 'Nellore, Andhra Pradesh, India',
+  phone: '+91 95732 89916',
   email: 'subbubhattaram@gmail.com',
   github: 'https://github.com/subbu957',
   githubUser: 'subbu957',
   linkedin: 'https://www.linkedin.com/in/subrhamanyam-bhattaram-658656303',
   photo: '/assets/profile.jpg',
   resumeUrl: '/assets/resume.pdf',
+  resumeHtmlUrl: '/resume.html',
+  careerObjective:
+    'B.Tech AI & ML student (2023–2027) with hands-on experience in front-end web development, Python programming, and responsive UI design. Built a functional web application using HTML5, CSS3, and JavaScript with DOM manipulation and event handling. Completed IBM Prompt Engineering (edX), YUVA AI, and Quantum Fundamentals certifications. Seeking a Web Developer internship to contribute to front-end development, UI/UX implementation, and web application projects.',
   summary:
-    "B.Tech AI & ML student building hands-on experience in front-end web development, Python, and responsive UI design. I craft clean, interactive web experiences with HTML5, CSS3, JavaScript and React, bridging aesthetic interfaces with practical AI integrations.",
+    'B.Tech AI & ML student (2023–2027) with hands-on experience in front-end web development, Python programming, and responsive UI design. Built functional web apps using HTML5, CSS3, and JavaScript with modular DOM manipulation and modern UI practices.',
   aboutParagraphs: [
-    "I'm a second-year B.Tech student in Artificial Intelligence & Machine Learning at Narayana Engineering College, Nellore. Alongside my coursework, I've been teaching myself front-end development — HTML5, CSS3, modern JavaScript, and React — building functional web applications from scratch.",
-    "I'm drawn to the intersection of clean interface design and practical engineering: writing modular, readable code, keeping UIs responsive across all devices, and leveraging prompt engineering and AI/ML concepts to build smarter, future-ready tools.",
+    "I'm a B.Tech student in Artificial Intelligence & Machine Learning at Narayana Engineering College (Autonomous), Nellore (2023–2027). Alongside my coursework in data structures, algorithms, and DBMS, I have cultivated strong front-end web development skills, building functional web applications with HTML5, CSS3, and modern JavaScript.",
+    "I focus on clean code principles, responsive UI/UX implementation, and modular engineering. Having completed certifications in IBM Prompt Engineering, YUVA AI, and Quantum Fundamentals, I actively blend modern web development with AI technologies.",
   ],
   stats: [
     { label: 'Degree & Branch', value: 'B.Tech AI & ML', sub: '2023 – 2027' },
-    { label: 'Core Focus', value: 'Front-End & UI', sub: 'React, JS, Tailwind' },
-    { label: 'Certifications', value: '4+ Programs', sub: 'IBM, YUVA, Quantum' },
-    { label: 'Status', value: 'Open for Roles', sub: 'Internships & Projects' },
+    { label: 'Core Focus', value: 'Front-End Web Dev', sub: 'HTML5, CSS3, JS & React' },
+    { label: 'Certifications', value: '4+ Industry Credentials', sub: 'IBM, YUVA, Qubitech' },
+    { label: 'Status', value: 'Open for Internships', sub: 'On-site & Hybrid' },
   ],
   strengths: [
     {
-      title: 'Clear Technical Communication',
-      desc: 'Fluent in both written and spoken communication, explaining complex technical concepts with clarity.'
+      title: 'Fluent English Communication',
+      desc: 'Clearly articulates technical concepts in written and spoken form for effective team collaboration and documentation.'
     },
     {
-      title: 'Fast & Self-Driven Learner',
-      desc: 'Proactively picked up modern front-end engineering alongside rigorous full-time B.Tech coursework.'
+      title: 'Fast Self-Learner',
+      desc: 'Independently acquired front-end web development skills alongside rigorous B.Tech AI & ML coursework.'
     },
     {
-      title: 'Detail & Pixel Precision',
-      desc: 'Obsessed with semantic HTML, fluid responsive layouts, clean CSS architecture, and smooth micro-interactions.'
+      title: 'Detail-Oriented & Clean Code',
+      desc: 'Applies clean code principles, semantic HTML5, and structured CSS/Flexbox practices to every project.'
     },
     {
-      title: 'Modern Developer Workflow',
-      desc: 'Daily practitioner of Git/GitHub version control, VS Code optimization, and Chrome DevTools debugging.'
+      title: 'Modern Tooling & Workflow',
+      desc: 'Practices version control with Git/GitHub, debugging with Chrome DevTools, and development in VS Code & Jupyter.'
     },
   ],
+  languages: [
+    { name: 'Telugu', level: 'Native / Mother Tongue' },
+    { name: 'English', level: 'Fluent (Professional)' },
+    { name: 'Hindi', level: 'Working Proficiency' },
+  ],
+  achievements: [
+    {
+      title: 'Front-End Web Application Deployment',
+      desc: 'Built and deployed a responsive front-end web application (Student Calculator) demonstrating proficiency in HTML5, CSS3, and JavaScript.'
+    },
+    {
+      title: 'Agentathon 2025 (GDG Hyderabad)',
+      desc: 'Engaged with Agentathon 2025 — the world’s largest Agentic AI hackathon — exploring AI integration with modern web platforms.'
+    },
+    {
+      title: 'LinkedIn Technical Author',
+      desc: 'Published technical insights and write-ups on web and AI technologies, achieving up to 379 impressions per post.'
+    },
+    {
+      title: 'Multiple Industry Certifications',
+      desc: 'Completed 3 industry-recognized credentials (IBM, YUVA, Qubitech) alongside full-time B.Tech coursework.'
+    }
+  ]
 }
 
 export const skills = [
   {
     category: 'Front-End Development',
     iconName: 'Layout',
-    items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive Web Design', 'DOM Manipulation', 'Event Handling'],
+    items: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web Design', 'DOM Manipulation', 'Event Handling'],
   },
   {
-    category: 'Frameworks & Styling',
+    category: 'Frameworks & Libraries',
     iconName: 'Code2',
-    items: ['React.js', 'TailwindCSS', 'Bootstrap', 'Framer Motion'],
+    items: ['Bootstrap', 'React.js (Exploring)', 'TailwindCSS'],
   },
   {
-    category: 'AI & Prompt Engineering',
+    category: 'AI & Automation',
     iconName: 'Sparkles',
-    items: ['Prompt Engineering (IBM Certified)', 'Python Automation', 'Machine Learning Basics', 'LLM Integration'],
+    items: ['Prompt Engineering (IBM Certified)', 'Python Automation', 'Machine Learning Concepts'],
   },
   {
-    category: 'Database & Backend Basics',
+    category: 'Database & Systems',
     iconName: 'Database',
-    items: ['SQL', 'MySQL', 'Relational Schemas', 'CRUD Operations'],
+    items: ['SQL', 'MySQL (Basics)', 'Database Management'],
   },
   {
-    category: 'Developer Tools',
+    category: 'Version Control & Tools',
     iconName: 'Wrench',
-    items: ['Git', 'GitHub', 'VS Code', 'Chrome DevTools', 'Vite', 'Jupyter Notebook'],
+    items: ['Git', 'GitHub', 'VS Code', 'Chrome DevTools', 'Jupyter Notebook'],
   },
   {
     category: 'Computer Science Core',
     iconName: 'Cpu',
-    items: ['Object-Oriented Programming (OOP)', 'Data Structures & Algorithms', 'Cross-Browser Compatibility'],
+    items: ['Object-Oriented Programming (OOP)', 'Data Structures', 'Algorithms', 'Cross-Browser Compatibility'],
   },
 ]
 
 export const projects = [
   {
-    title: 'Student SGPA / CGPA Calculator',
+    title: 'Student Calculator – Front-End Web Application',
     badge: 'Featured Project',
+    year: '2025',
     category: 'Web App',
     description:
-      'A production-ready front-end web application for calculating student semester and cumulative grade point averages in real time. Features dynamic course rows, instant grade weighting, and comprehensive error handling.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Flexbox'],
+      'A fully functional Student Calculator web application developed with HTML5, CSS3, and JavaScript, featuring real-time input processing and arithmetic operations.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Flexbox'],
     github: 'https://github.com/subbu957',
     demo: 'https://b-tech-student-calculator.vercel.app',
-    highlights: ['Real-time calculation engine', 'Responsive across mobile, tablet & desktop', 'Tested cross-browser'],
+    highlights: [
+      'Developed fully functional Student Calculator web app using HTML5, CSS3, and JavaScript',
+      'Implemented arithmetic operations (+, -, *, /) with real-time input processing via JS DOM manipulation & event handling',
+      'Designed responsive, mobile-friendly UI with CSS3 flexbox ensuring cross-browser compatibility across Chrome, Firefox, and Edge',
+      'Followed clean code principles with modular JS functions, separation of concerns, and structured HTML semantics'
+    ],
   },
   {
-    title: 'Modern Developer Portfolio v2',
+    title: 'Modern Developer Portfolio',
     badge: 'Live Showcase',
+    year: '2025',
     category: 'Web App',
     description:
-      'High-performance personal developer portfolio built with React, Vite, TailwindCSS, and Framer Motion. Engineered with dark glassmorphic aesthetics, animated aurora backdrops, and interactive UI micro-interactions.',
-    stack: ['React', 'Vite', 'TailwindCSS', 'Framer Motion'],
+      'Modern, high-performance personal developer portfolio built with React, Vite, TailwindCSS, and Framer Motion, showcasing academic credentials, projects, certifications, and downloadable ATS resume.',
+    stack: ['React.js', 'Vite', 'TailwindCSS', 'Framer Motion'],
     github: 'https://github.com/subbu957',
     demo: '#home',
-    highlights: ['Interactive role switcher', 'Glassmorphism & animated mesh glows', 'Accessible & mobile-first'],
+    highlights: [
+      'Integrated live resume viewer & instant PDF download',
+      'Interactive project showcases and skill filtration',
+      'Fully responsive glassmorphic UI with animated dark theme'
+    ],
   },
   {
     title: 'AI Prompt Engineering Studio',
     badge: 'AI & Automation',
+    year: '2024',
     category: 'AI / Python',
     description:
-      'A collection of systematic prompt templates, testing harnesses, and automation workflows designed for generative AI models, leveraging techniques learned from the IBM Prompt Engineering certification.',
-    stack: ['Prompt Engineering', 'Python', 'LLM APIs', 'Markdown'],
+      'Collection of systematic prompt templates, chain-of-thought workflows, and automation scripts based on IBM Prompt Engineering certification principles.',
+    stack: ['Prompt Engineering', 'Python', 'AI Workflows'],
     github: 'https://github.com/subbu957',
     demo: null,
-    highlights: ['Few-shot & chain-of-thought patterns', 'Structured output generation', 'Automated evaluation workflows'],
-  },
-  {
-    title: 'Python Automation & Utility Hub',
-    badge: 'Tooling',
-    category: 'AI / Python',
-    description:
-      'Modular Python utility scripts for streamlining repetitive student workflows, including data parsing, file organization, and automated academic schedule reminders.',
-    stack: ['Python 3', 'Automation', 'Data Structures'],
-    github: 'https://github.com/subbu957',
-    demo: null,
-    highlights: ['Clean OOP architecture', 'CLI interface for fast execution', 'Error logging & reporting'],
+    highlights: [
+      'Few-shot and structured output prompt architectures',
+      'Automated script validation with Python',
+      'Practical LLM integration patterns'
+    ],
   },
 ]
 
@@ -137,52 +170,56 @@ export const education = [
   {
     school: 'Narayana Engineering College (Autonomous)',
     location: 'Nellore, Andhra Pradesh',
-    credential: 'B.Tech — Artificial Intelligence & Machine Learning',
+    credential: 'B.Tech – Artificial Intelligence & Machine Learning',
     period: '2023 – 2027',
-    detail: 'Coursework: Data Structures & Algorithms, OOP, Database Management Systems, Computer Networks, Software Engineering, Web Technologies',
+    detail: 'Relevant coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Software Engineering, Web Technologies',
   },
   {
     school: 'Narayana Junior College',
     location: 'Arvindha Nagar, Nellore, Andhra Pradesh',
-    credential: 'Intermediate (MPC) — 86.4%',
+    credential: 'Intermediate (MPC) – 86.4%',
     period: '2021 – 2023',
   },
   {
     school: 'Ratnam High School',
-    location: 'Lakshmipuram, Nellore, Andhra Pradesh',
-    credential: 'Secondary School Certificate (Class 6–10) — 599 Marks',
+    location: 'Lakshmipuram, Nellore, Andhra Pradesh – 524002',
+    credential: 'Secondary School Certificate (SSC, Class 6–10) – 599 Marks',
     period: 'Completed 2020',
-  },
-]
-
-export const journey = [
-  {
-    title: 'Front-end fundamentals',
-    detail: 'Mastered HTML5, CSS3, and JavaScript — DOM manipulation, asynchronous fetching, event delegation, and responsive layouts.',
-  },
-  {
-    title: 'Shipped a real project',
-    detail: 'Engineered and deployed the Student SGPA/CGPA Calculator, actively utilized by peers with intuitive UX.',
-  },
-  {
-    title: 'AI & prompt engineering',
-    detail: 'Earned IBM certification in Prompt Engineering (via edX) and completed the hands-on YUVA AI program.',
-  },
-  {
-    title: 'Hackathon exposure',
-    detail: 'Participated in Agentathon 2025 (GDG Hyderabad), exploring agentic AI integration with web platforms.',
-  },
-  {
-    title: 'Sharing what I learn',
-    detail: 'Publishing technical insights on LinkedIn about web development best practices and practical AI applications.',
   },
 ]
 
 export const certifications = [
   { name: 'Introduction to Prompt Engineering', issuer: 'IBM via edX', year: '2024' },
   { name: 'YUVA AI Program', issuer: 'YUVA', year: '2025' },
-  { name: 'Quantum Fundamentals Program', issuer: 'Qubitech, WISER & Amaravati Quantum Valley', year: '2025' },
+  { name: 'Quantum Fundamentals Program', issuer: 'Qubitech, WISER & Amravati Quantum Valley', year: '2025' },
   { name: 'Sustainable Information Technology', issuer: 'Narayana Engineering College', year: '2023 – Present' },
+]
+
+export const journey = [
+  {
+    title: 'Front-End Development Mastery',
+    detail: 'Mastered HTML5, CSS3, and JavaScript with DOM manipulation, event handling, flexbox layouts, and cross-browser responsiveness.',
+  },
+  {
+    title: 'Student Calculator Web App',
+    detail: 'Built and deployed the functional Student Calculator web application with clean modular code and real-time operations.',
+  },
+  {
+    title: 'IBM & YUVA AI Certifications',
+    detail: 'Earned IBM Prompt Engineering (edX) and YUVA AI certifications, mastering structured prompting and AI workflows.',
+  },
+  {
+    title: 'Quantum Fundamentals Program',
+    detail: 'Completed the Quantum Fundamentals Program certified by Qubitech, WISER & Amravati Quantum Valley.',
+  },
+  {
+    title: 'Agentathon 2025 (GDG Hyderabad)',
+    detail: 'Engaged with Agentathon 2025 — world’s largest Agentic AI hackathon — exploring AI integration with modern web platforms.',
+  },
+  {
+    title: 'Technical Sharing & Mentorship',
+    detail: 'Actively publishing technical insights on LinkedIn, achieving up to 379 impressions per post while pursuing B.Tech.',
+  },
 ]
 
 export const nav = [
