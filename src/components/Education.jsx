@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading'
 
 export default function Education() {
   return (
-    <section id="education" className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 sm:py-24">
+    <section id="education" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-24 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute left-10 top-1/2 h-72 w-72 rounded-full bg-violet-dim/15 blur-[120px]" />
 

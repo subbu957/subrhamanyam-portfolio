@@ -12,7 +12,7 @@ export default function Projects() {
     filter === 'All' ? projects : projects.filter((p) => p.category === filter)
 
   return (
-    <section id="projects" className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 sm:py-24">
+    <section id="projects" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-24 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-violet-dim/15 blur-[130px]" />
       <div className="pointer-events-none absolute -right-20 bottom-1/4 h-80 w-80 rounded-full bg-azure-dim/15 blur-[130px]" />

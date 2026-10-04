@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading'
 
 export default function About({ onOpenResume }) {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 sm:py-24">
+    <section id="about" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-24 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 h-72 w-72 sm:w-96 rounded-full bg-violet-dim/15 blur-[120px]" />
 

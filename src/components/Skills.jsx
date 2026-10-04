@@ -23,7 +23,7 @@ export default function Skills() {
       : skills.filter((s) => s.category === selectedCategory)
 
   return (
-    <section id="skills" className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20 sm:py-24">
+    <section id="skills" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-24 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute right-10 top-1/4 h-72 w-72 rounded-full bg-azure-dim/15 blur-[120px]" />
 

@@ -37,9 +37,9 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden selection:bg-indigo-600 selection:text-white">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden selection:bg-indigo-600 selection:text-white">
       <Navbar onOpenResume={openResume} />
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <Hero onOpenResume={openResume} />
         <About onOpenResume={openResume} />
         <Skills />
@@ -51,7 +51,7 @@ export default function App() {
       <Footer onOpenResume={openResume} />
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2.5">
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2.5 pointer-events-auto">
         {/* Floating Quick Resume Button */}
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}

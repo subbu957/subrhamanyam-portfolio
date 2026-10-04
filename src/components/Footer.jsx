@@ -7,7 +7,7 @@ export default function Footer({ onOpenResume }) {
   }
 
   return (
-    <footer className="border-t border-white/[0.12] bg-base/80 backdrop-blur-xl">
+    <footer className="w-full max-w-full overflow-hidden border-t border-white/[0.12] bg-base/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-4 sm:px-6 py-8 sm:py-10 sm:flex-row">
         <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-violet via-azure to-bloom font-display text-xs font-bold text-white shadow-sm">
