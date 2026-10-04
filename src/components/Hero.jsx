@@ -81,7 +81,7 @@ export default function Hero({ onOpenResume }) {
           </motion.div>
 
           {/* Bio text */}
-          <motion.p variants={item} className="mt-4 sm:mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-slate-200 font-normal">
+          <motion.p variants={item} className="mt-4 sm:mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-slate-100 font-normal">
             {profile.summary}
           </motion.p>
 
@@ -180,7 +180,7 @@ export default function Hero({ onOpenResume }) {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="glass-pill absolute -top-3 -left-3 sm:-top-4 sm:-left-4 flex items-center gap-2.5 rounded-2xl px-3.5 py-2 shadow-lg backdrop-blur-xl border-white/20 animate-float-slow"
           >
-            <div className="flex h-7 w-7 items-center justify-center rounded-xl bg-violet-dim/30 text-violet">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-dim/30 text-violet">
               <Sparkles size={14} />
             </div>
             <div>
