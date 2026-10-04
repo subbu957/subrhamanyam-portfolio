@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, Linkedin, Mail, ArrowRight, Download, Sparkles, Code2, MapPin, FileText, Phone } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowRight, Sparkles, Code2, MapPin, FileText, Phone } from 'lucide-react'
 import { profile } from '../data/portfolioData'
 
 const container = {
@@ -104,12 +104,10 @@ export default function Hero({ onOpenResume }) {
             </button>
 
             <a
-              href={profile.resumeUrl}
-              download="Subrhamanyam_Bhattaram_Resume.pdf"
-              className="glass-pill inline-flex items-center justify-center gap-2 rounded-full px-5 py-3.5 sm:py-3 text-sm font-bold text-slate-200 transition-all duration-200 hover:border-azure/60 hover:bg-azure-dim/20 hover:text-white active:scale-[0.98] focus-ring"
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold text-slate-300 transition-colors hover:text-white focus-ring"
             >
-              <Download size={15} className="text-azure" />
-              <span>Download PDF</span>
+              Contact Me &rarr;
             </a>
           </motion.div>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Copy, Check, Send, MessageSquare, Phone, Mail, MapPin, FileText, Download, Sparkles } from 'lucide-react'
+import { Github, Linkedin, Copy, Check, Send, MessageSquare, Phone, Mail, MapPin, FileText } from 'lucide-react'
 import { profile } from '../data/portfolioData'
 import SectionHeading from './SectionHeading'
 
@@ -246,19 +246,11 @@ export default function Contact({ onOpenResume }) {
             <div className="flex items-center gap-2">
               <button
                 onClick={onOpenResume}
-                className="glass-pill inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-xs font-bold text-white transition-all hover:bg-violet-dim/25 hover:border-violet/60"
+                className="glass-pill inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold text-white transition-all hover:bg-violet-dim/25 hover:border-violet/60"
               >
-                <FileText size={13} className="text-violet" />
+                <FileText size={14} className="text-violet" />
                 <span>View Resume</span>
               </button>
-              <a
-                href={profile.resumeUrl}
-                download="Subrhamanyam_Bhattaram_Resume.pdf"
-                className="glass-pill inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-xs font-bold text-slate-200 transition-all hover:bg-azure-dim/25 hover:border-azure/60 hover:text-white"
-              >
-                <Download size={13} className="text-azure" />
-                <span>Download PDF</span>
-              </a>
             </div>
           </div>
         </motion.div>

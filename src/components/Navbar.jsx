@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, FileText, Download, Sparkles } from 'lucide-react'
+import { Menu, X, FileText } from 'lucide-react'
 import { nav, profile } from '../data/portfolioData'
 
 export default function Navbar({ onOpenResume }) {
@@ -103,24 +103,15 @@ export default function Navbar({ onOpenResume }) {
             })}
           </ul>
 
-          {/* Action Buttons */}
+          {/* Action Button */}
           <div className="hidden md:flex items-center gap-2.5">
             <button
               onClick={onOpenResume}
-              className="glass-pill group inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold text-white border-white/20 transition-all hover:border-violet/60 hover:bg-violet/20 focus-ring"
+              className="glass-pill group inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold text-white border-white/20 transition-all hover:border-violet/60 hover:bg-violet-dim/25 hover:text-white focus-ring"
             >
               <FileText size={14} className="text-violet transition-transform group-hover:scale-110" />
-              <span>Resume</span>
+              <span>View Resume</span>
             </button>
-            
-            <a
-              href={profile.resumeUrl}
-              download="Subrhamanyam_Bhattaram_Resume.pdf"
-              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-dim to-azure-dim hover:from-violet hover:to-azure px-4 py-2 text-xs font-bold text-white shadow-glow transition-all hover:scale-105 active:scale-95 focus-ring"
-            >
-              <Download size={14} />
-              <span>Download PDF</span>
-            </a>
           </div>
 
           {/* Mobile menu trigger button */}
@@ -165,26 +156,17 @@ export default function Navbar({ onOpenResume }) {
                     </li>
                   )
                 })}
-                <li className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-2.5">
+                <li className="mt-3 pt-3 border-t border-white/10">
                   <button
                     onClick={() => {
                       setOpen(false)
                       onOpenResume()
                     }}
-                    className="flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/[0.08] px-4 py-3 text-sm font-bold text-white focus-ring"
+                    className="w-full flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/[0.08] px-4 py-3 text-sm font-bold text-white focus-ring hover:border-violet/60 hover:bg-violet-dim/20"
                   >
                     <FileText size={15} className="text-violet" />
-                    Preview Resume
+                    View Resume
                   </button>
-                  <a
-                    href={profile.resumeUrl}
-                    download="Subrhamanyam_Bhattaram_Resume.pdf"
-                    onClick={() => setOpen(false)}
-                    className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-dim to-azure-dim px-4 py-3 text-sm font-bold text-white shadow-glow focus-ring"
-                  >
-                    <Download size={15} />
-                    Download Resume PDF
-                  </a>
                 </li>
               </ul>
             </motion.div>

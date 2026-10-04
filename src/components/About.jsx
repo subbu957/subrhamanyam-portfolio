@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { CheckCircle2, Award, Compass, Sparkles, Languages, Trophy, FileText, Download } from 'lucide-react'
+import { CheckCircle2, Award, Compass, Sparkles, Languages, Trophy, FileText } from 'lucide-react'
 import { profile } from '../data/portfolioData'
 import SectionHeading from './SectionHeading'
 
@@ -72,19 +72,11 @@ export default function About({ onOpenResume }) {
             <div className="flex items-center gap-2">
               <button
                 onClick={onOpenResume}
-                className="glass-pill inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-bold text-white transition-all hover:bg-violet-dim/25 hover:border-violet/60"
+                className="glass-pill inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold text-white transition-all hover:bg-violet-dim/25 hover:border-violet/60"
               >
                 <FileText size={14} className="text-violet" />
                 <span>View ATS Resume</span>
               </button>
-              <a
-                href={profile.resumeUrl}
-                download="Subrhamanyam_Bhattaram_Resume.pdf"
-                className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-violet-dim to-azure-dim px-3.5 py-2 text-xs font-bold text-white shadow-sm transition-all hover:scale-105 active:scale-95"
-              >
-                <Download size={14} />
-                <span>Download PDF</span>
-              </a>
             </div>
           </div>
         </motion.div>
