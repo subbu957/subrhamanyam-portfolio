@@ -51,7 +51,7 @@ export default function About({ onOpenResume }) {
             </div>
 
             {/* Crisp, Sharp Career Objective Box */}
-            <div className="rounded-2xl border border-violet-dim/35 bg-[#0C1024] p-4 sm:p-5 mb-6 shadow-md">
+            <div className="rounded-2xl border border-violet-dim/40 bg-[#0C1024] p-4 sm:p-5 mb-6 shadow-md">
               <p className="text-sm sm:text-base leading-relaxed text-white font-medium">
                 {profile.careerObjective}
               </p>
@@ -59,7 +59,7 @@ export default function About({ onOpenResume }) {
 
             <h4 className="font-display text-sm sm:text-base font-bold text-white mb-2.5">My Background &amp; Focus</h4>
             {profile.aboutParagraphs.map((p, i) => (
-              <p key={i} className={`text-sm sm:text-base leading-relaxed text-slate-200 font-normal ${i > 0 ? 'mt-3' : ''}`}>
+              <p key={i} className={`text-sm sm:text-base leading-relaxed text-white font-normal ${i > 0 ? 'mt-3' : ''}`}>
                 {p}
               </p>
             ))}

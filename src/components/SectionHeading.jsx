@@ -22,7 +22,7 @@ export default function SectionHeading({ kicker, title, description, align = 'le
         {title}
       </h2>
       {description && (
-        <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-200 font-normal">
+        <p className="mt-3 text-sm sm:text-base leading-relaxed text-white font-normal">
           {description}
         </p>
       )}

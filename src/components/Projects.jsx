@@ -91,13 +91,13 @@ export default function Projects() {
                   <span className="h-2.5 w-2.5 rounded-full bg-rose-500/90" />
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-500/90" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald/90" />
-                  <span className="ml-2 text-xs text-slate-300 font-mono font-medium truncate max-w-[130px] sm:max-w-[220px]">
+                  <span className="ml-2 text-xs text-white font-mono font-medium truncate max-w-[130px] sm:max-w-[220px]">
                     {project.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}.dev
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   {project.year && (
-                    <span className="text-[11px] text-slate-400 font-mono">{project.year}</span>
+                    <span className="text-[11px] text-white font-mono">{project.year}</span>
                   )}
                   <span className="inline-flex items-center rounded-full border border-violet-dim/40 bg-violet-dim/20 px-2.5 py-0.5 text-xs font-bold text-violet">
                     {project.badge}
@@ -111,7 +111,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-200 font-normal">
+                <p className="mt-3 text-sm sm:text-base leading-relaxed text-white font-normal">
                   {project.description}
                 </p>
 
@@ -119,7 +119,7 @@ export default function Projects() {
                 {project.highlights && (
                   <div className="mt-4 space-y-2 border-l-2 border-violet-dim/40 pl-3">
                     {project.highlights.map((h, idx) => (
-                      <p key={idx} className="text-xs sm:text-sm text-slate-200 flex items-start gap-2 font-normal leading-relaxed">
+                      <p key={idx} className="text-xs sm:text-sm text-white flex items-start gap-2 font-normal leading-relaxed">
                         <CheckCircle2 size={14} className="text-cyan-400 shrink-0 mt-0.5" />
                         <span>{h}</span>
                       </p>
@@ -132,7 +132,7 @@ export default function Projects() {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="glass-pill rounded-lg px-2.5 py-1 text-xs font-bold text-slate-200 border-white/15 hover:border-violet/40"
+                      className="glass-pill rounded-lg px-2.5 py-1 text-xs font-bold text-white border-white/20 hover:border-violet/40"
                     >
                       {tech}
                     </span>
@@ -165,7 +165,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="glass-pill inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs sm:text-sm font-bold text-slate-200 border-white/15 transition-all hover:border-violet/60 hover:bg-violet-dim/20 hover:text-white focus-ring"
+                    className="glass-pill inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs sm:text-sm font-bold text-white border-white/20 transition-all hover:border-violet/60 hover:bg-violet-dim/20 hover:text-white focus-ring"
                   >
                     <Github size={13} />
                     Source
