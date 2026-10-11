@@ -47,19 +47,27 @@ export default function About({ onOpenResume }) {
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-violet-dim/30 text-violet border border-violet-dim/40 shadow-sm">
                 <Compass size={18} />
               </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-white tracking-wide">Career Objective</h3>
+              <h3 className="font-display text-base sm:text-lg font-bold text-white tracking-wide" style={{ color: '#FFFFFF' }}>
+                Career Objective
+              </h3>
             </div>
 
             {/* Crisp, Sharp Career Objective Box */}
-            <div className="rounded-2xl border border-violet-dim/40 bg-[#0C1024] p-4 sm:p-5 mb-6 shadow-md">
-              <p className="text-sm sm:text-base leading-relaxed text-white font-medium">
+            <div className="rounded-2xl border border-white/20 bg-white/[0.04] p-4 sm:p-5 mb-6 shadow-md backdrop-blur-md">
+              <p className="text-sm sm:text-base leading-relaxed text-white font-medium" style={{ color: '#FFFFFF' }}>
                 {profile.careerObjective}
               </p>
             </div>
 
-            <h4 className="font-display text-sm sm:text-base font-bold text-white mb-2.5">My Background &amp; Focus</h4>
+            <h4 className="font-display text-sm sm:text-base font-bold text-white mb-2.5" style={{ color: '#FFFFFF' }}>
+              My Background &amp; Focus
+            </h4>
             {profile.aboutParagraphs.map((p, i) => (
-              <p key={i} className={`text-sm sm:text-base leading-relaxed text-white font-normal ${i > 0 ? 'mt-3' : ''}`}>
+              <p
+                key={i}
+                className={`text-sm sm:text-base leading-relaxed text-white font-normal ${i > 0 ? 'mt-3' : ''}`}
+                style={{ color: '#FFFFFF' }}
+              >
                 {p}
               </p>
             ))}
