@@ -8,7 +8,7 @@ export default function Contact({ onOpenResume }) {
   const [copiedEmail, setCopiedEmail] = useState(false)
   const [copiedPhone, setCopiedPhone] = useState(false)
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [sentNotice, setSentNotice] = useState(false)
+  const [sentNotice, setSentNotice] = useState('')
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(profile.email)
@@ -22,17 +22,40 @@ export default function Contact({ onOpenResume }) {
     setTimeout(() => setCopiedPhone(false), 2500)
   }
 
+  const getSubjectAndBody = () => {
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name || 'Visitor'}`)
+    const body = encodeURIComponent(
+      `Hi Subrhamanyam,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )
+    return { subject, body }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) return
     
-    // Construct mailto link
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`)
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
+    const { subject, body } = getSubjectAndBody()
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
     
-    setSentNotice(true)
-    setTimeout(() => setSentNotice(false), 5000)
+    setSentNotice('mail-client')
+    setTimeout(() => setSentNotice(''), 5000)
+  }
+
+  const handleOpenGmail = () => {
+    if (!formData.name || !formData.email || !formData.message) return
+    const { subject, body } = getSubjectAndBody()
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${subject}&body=${body}`
+    window.open(gmailUrl, '_blank')
+    setSentNotice('gmail')
+    setTimeout(() => setSentNotice(''), 5000)
+  }
+
+  const handleCopyDraft = () => {
+    if (!formData.name || !formData.email || !formData.message) return
+    const draft = `To: ${profile.email}\nSubject: Portfolio Inquiry from ${formData.name}\n\nHi Subrhamanyam,\n\n${formData.message}\n\nBest regards,\n${formData.name} (${formData.email})`
+    navigator.clipboard.writeText(draft)
+    setSentNotice('copied')
+    setTimeout(() => setSentNotice(''), 5000)
   }
 
   return (
@@ -224,17 +247,48 @@ export default function Contact({ onOpenResume }) {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-dim to-azure-dim hover:from-violet-glow hover:to-azure px-6 py-3.5 sm:py-3 text-sm font-bold text-white shadow-glow transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] focus-ring"
-              >
-                <Send size={16} />
-                Send Message via Email
-              </button>
+              <div className="flex flex-col sm:flex-row gap-2.5">
+                <button
+                  type="button"
+                  onClick={handleOpenGmail}
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-dim to-azure-dim hover:from-violet-glow hover:to-azure px-5 py-3 text-xs sm:text-sm font-bold text-white shadow-glow transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] focus-ring"
+                >
+                  <Mail size={15} />
+                  <span>Open in Gmail</span>
+                </button>
 
-              {sentNotice && (
+                <button
+                  type="submit"
+                  className="glass-pill inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-5 py-3 text-xs sm:text-sm font-bold text-white border-white/20 transition-all hover:bg-violet-dim/20 hover:border-violet/60 active:scale-[0.99] focus-ring"
+                >
+                  <Send size={15} />
+                  <span>Default Mail App</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleCopyDraft}
+                  title="Copy message text to clipboard"
+                  className="glass-pill inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-3 text-xs font-bold text-slate-300 border-white/20 transition-all hover:bg-white/[0.08] hover:text-white active:scale-[0.99] focus-ring"
+                >
+                  <Copy size={14} />
+                  <span className="sm:hidden lg:inline">Copy Draft</span>
+                </button>
+              </div>
+
+              {sentNotice === 'gmail' && (
                 <p className="text-center text-xs text-emerald-light font-bold animate-pulse">
-                  Email client opened! Thank you for getting in touch.
+                  ✓ Gmail opened in new tab with your pre-filled inquiry!
+                </p>
+              )}
+              {sentNotice === 'mail-client' && (
+                <p className="text-center text-xs text-emerald-light font-bold animate-pulse">
+                  ✓ Opened your system email client. Thank you for connecting!
+                </p>
+              )}
+              {sentNotice === 'copied' && (
+                <p className="text-center text-xs text-cyan-300 font-bold animate-pulse">
+                  ✓ Message draft copied to clipboard! You can paste it into any messaging app.
                 </p>
               )}
             </form>

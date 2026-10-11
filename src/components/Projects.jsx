@@ -1,11 +1,34 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, ExternalLink, Sparkles, CheckCircle2 } from 'lucide-react'
+import { Github, ExternalLink, Sparkles, CheckCircle2, Play, X, Maximize2, Loader2 } from 'lucide-react'
 import { projects, profile } from '../data/portfolioData'
 import SectionHeading from './SectionHeading'
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
+  const [activePreview, setActivePreview] = useState(null)
+  const [iframeLoading, setIframeLoading] = useState(true)
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setActivePreview(null)
+    }
+    if (activePreview) {
+      document.body.style.overflow = 'hidden'
+      window.addEventListener('keydown', handleKeyDown)
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [activePreview])
+
+  const openPreview = (project) => {
+    setIframeLoading(true)
+    setActivePreview(project)
+  }
 
   const categories = ['All', 'Web App', 'AI / Python']
   const displayedProjects =
@@ -117,26 +140,35 @@ export default function Projects() {
                 </div>
 
                 {/* Actions */}
-                <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-white/[0.1] pt-4 sm:pt-5">
+                <div className="mt-6 flex flex-wrap items-center gap-2.5 border-t border-white/[0.1] pt-4 sm:pt-5">
+                  {project.previewUrl && (
+                    <button
+                      onClick={() => openPreview(project)}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-dim to-azure-dim hover:from-violet hover:to-azure px-4 py-2 text-xs sm:text-sm font-bold text-white shadow-glow transition-all duration-200 hover:scale-105 active:scale-95 focus-ring"
+                    >
+                      <Play size={13} fill="currentColor" />
+                      Interactive Test
+                    </button>
+                  )}
                   {project.demo && (
                     <a
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-dim to-azure-dim hover:from-violet hover:to-azure px-4 py-2 text-xs sm:text-sm font-bold text-white shadow-sm transition-all duration-200 hover:scale-105 active:scale-95 focus-ring"
+                      className="glass-pill inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs sm:text-sm font-bold text-white border-white/20 transition-all duration-200 hover:border-azure/60 hover:bg-azure-dim/20 focus-ring"
                     >
-                      <ExternalLink size={14} />
-                      Live Demo
+                      <ExternalLink size={13} />
+                      Live Link
                     </a>
                   )}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="glass-pill inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs sm:text-sm font-bold text-slate-200 border-white/15 transition-all hover:border-violet/60 hover:bg-violet-dim/20 hover:text-white focus-ring"
+                    className="glass-pill inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs sm:text-sm font-bold text-slate-200 border-white/15 transition-all hover:border-violet/60 hover:bg-violet-dim/20 hover:text-white focus-ring"
                   >
-                    <Github size={14} />
-                    View Source
+                    <Github size={13} />
+                    Source
                   </a>
                 </div>
               </div>
@@ -172,6 +204,82 @@ export default function Projects() {
           <ExternalLink size={14} />
         </a>
       </motion.div>
+
+      {/* Interactive Project Preview Modal */}
+      <AnimatePresence>
+        {activePreview && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActivePreview(null)}
+              className="fixed inset-0 bg-[#070913]/85 backdrop-blur-xl"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.94, y: 20 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="relative z-10 w-full max-w-5xl h-[88vh] flex flex-col rounded-3xl border border-white/20 bg-[#0C1022] shadow-2xl overflow-hidden backdrop-blur-2xl"
+            >
+              {/* Modal Header */}
+              <div className="flex items-center justify-between border-b border-white/[0.12] bg-white/[0.03] px-4 sm:px-6 py-3.5">
+                <div className="flex items-center gap-2.5 truncate">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-dim/25 text-violet border border-violet-dim/30 shrink-0">
+                    <Maximize2 size={16} />
+                  </div>
+                  <div className="truncate">
+                    <h3 className="font-display text-sm sm:text-base font-bold text-white truncate">
+                      {activePreview.title}
+                    </h3>
+                    <p className="text-[11px] text-slate-300 font-mono truncate">
+                      Live Sandbox Preview • {activePreview.previewUrl}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <a
+                    href={activePreview.previewUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hidden sm:inline-flex items-center gap-1.5 rounded-xl border border-white/20 bg-white/[0.08] px-3 py-1.5 text-xs font-bold text-white transition-all hover:bg-white/[0.15]"
+                  >
+                    <ExternalLink size={13} />
+                    <span>Open in Tab</span>
+                  </a>
+                  <button
+                    onClick={() => setActivePreview(null)}
+                    className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/20 bg-white/[0.08] text-slate-300 transition-colors hover:bg-white/[0.15] hover:text-white"
+                    title="Close Preview (Esc)"
+                  >
+                    <X size={16} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Iframe Sandbox Container */}
+              <div className="relative flex-1 w-full bg-[#070913] overflow-hidden">
+                {iframeLoading && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#070913]/90 z-20">
+                    <Loader2 size={32} className="text-azure animate-spin" />
+                    <p className="text-xs text-slate-300 font-mono">Loading application sandbox...</p>
+                  </div>
+                )}
+                <iframe
+                  src={activePreview.previewUrl}
+                  title={activePreview.title}
+                  onLoad={() => setIframeLoading(false)}
+                  className="w-full h-full border-0 bg-white"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                />
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }

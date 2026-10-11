@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Layout, Code2, Sparkles, Database, Wrench, Cpu, Layers } from 'lucide-react'
+import { Layout, Code2, Sparkles, Database, Wrench, Cpu, Layers, Search, X } from 'lucide-react'
 import { skills } from '../data/portfolioData'
 import SectionHeading from './SectionHeading'
 
@@ -15,12 +15,32 @@ const iconMap = {
 
 export default function Skills() {
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [searchQuery, setSearchQuery] = useState('')
 
   const categories = ['All', ...skills.map((s) => s.category)]
-  const filteredSkills =
-    selectedCategory === 'All'
-      ? skills
-      : skills.filter((s) => s.category === selectedCategory)
+
+  const filteredSkills = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase()
+    return skills
+      .filter((s) => (selectedCategory === 'All' ? true : s.category === selectedCategory))
+      .map((group) => {
+        if (!query) return group
+        const matchesCategory = group.category.toLowerCase().includes(query)
+        const matchingItems = group.items.filter((item) =>
+          item.toLowerCase().includes(query)
+        )
+        if (matchesCategory) return group
+        if (matchingItems.length > 0) {
+          return { ...group, items: matchingItems }
+        }
+        return null
+      })
+      .filter(Boolean)
+  }, [selectedCategory, searchQuery])
+
+  const totalVisibleSkills = useMemo(() => {
+    return filteredSkills.reduce((acc, curr) => acc + curr.items.length, 0)
+  }, [filteredSkills])
 
   return (
     <section id="skills" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-24 overflow-hidden">
@@ -32,6 +52,34 @@ export default function Skills() {
         title="Skills, Frameworks &amp; Core Tools"
         description="Technologies I practice and apply in web development, AI exploration, and coursework."
       />
+
+      {/* Interactive Search Bar & Quick Stats */}
+      <div className="mx-auto max-w-md mb-6">
+        <div className="relative flex items-center">
+          <Search size={16} className="absolute left-3.5 text-slate-400 pointer-events-none" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search skills (e.g. React, Python, HTML, Git)..."
+            className="w-full rounded-full border border-white/15 bg-white/[0.05] py-2.5 pl-10 pr-10 text-xs sm:text-sm text-white placeholder:text-slate-400 focus:border-violet focus:bg-white/[0.1] focus:outline-none backdrop-blur-xl transition-all shadow-inner"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 text-slate-400 hover:text-white transition-colors"
+              title="Clear search"
+            >
+              <X size={15} />
+            </button>
+          )}
+        </div>
+        {searchQuery && (
+          <p className="mt-2 text-center text-xs text-azure font-medium">
+            Found {totalVisibleSkills} skill{totalVisibleSkills === 1 ? '' : 's'} matching &ldquo;{searchQuery}&rdquo;
+          </p>
+        )}
+      </div>
 
       {/* Category filter pills */}
       <div className="mb-8 sm:mb-10 flex flex-wrap items-center justify-center gap-2 px-1">

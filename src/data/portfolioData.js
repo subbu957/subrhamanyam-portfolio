@@ -125,6 +125,7 @@ export const projects = [
     stack: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Flexbox'],
     github: 'https://github.com/subbu957',
     demo: 'https://b-tech-student-calculator.vercel.app',
+    previewUrl: 'https://b-tech-student-calculator.vercel.app',
     highlights: [
       'Developed fully functional Student Calculator web app using HTML5, CSS3, and JavaScript',
       'Implemented arithmetic operations (+, -, *, /) with real-time input processing via JS DOM manipulation & event handling',
@@ -141,7 +142,8 @@ export const projects = [
       'Modern, high-performance personal developer portfolio built with React, Vite, TailwindCSS, and Framer Motion, showcasing academic credentials, projects, certifications, and downloadable ATS resume.',
     stack: ['React.js', 'Vite', 'TailwindCSS', 'Framer Motion'],
     github: 'https://github.com/subbu957',
-    demo: '#home',
+    demo: 'https://subrhamanyam-portfolio.vercel.app',
+    previewUrl: null,
     highlights: [
       'Integrated live resume viewer & instant PDF download',
       'Interactive project showcases and skill filtration',
@@ -158,6 +160,7 @@ export const projects = [
     stack: ['Prompt Engineering', 'Python', 'AI Workflows'],
     github: 'https://github.com/subbu957',
     demo: null,
+    previewUrl: null,
     highlights: [
       'Few-shot and structured output prompt architectures',
       'Automated script validation with Python',
