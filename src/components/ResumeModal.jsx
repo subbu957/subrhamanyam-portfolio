@@ -191,32 +191,28 @@ export default function ResumeModal({ isOpen, onClose }) {
                   </h2>
                   <div className="text-xs space-y-1">
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
+                      <span className="font-bold text-slate-900 font-sans">Generative AI &amp; LLMs:</span>
+                      <span className="text-slate-800">Prompt Engineering (IBM Certified), LangChain, LangGraph, RAG Architecture, Vector DBs (ChromaDB), OpenAI &amp; Gemini APIs, Function Calling, Multi-Agent Systems</span>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
                       <span className="font-bold text-slate-900 font-sans">Front-End:</span>
-                      <span className="text-slate-800">HTML5, CSS3, JavaScript, Responsive Web Design, DOM Manipulation, Event Handling</span>
+                      <span className="text-slate-800">React.js, JavaScript (ES6+), TailwindCSS, HTML5 Semantic UI, CSS3 Flexbox/Grid, Streaming SSE UI, DOM Manipulation</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Frameworks/Libs:</span>
-                      <span className="text-slate-800">Bootstrap, exploring React.js</span>
+                      <span className="font-bold text-slate-900 font-sans">Back-End &amp; AI APIs:</span>
+                      <span className="text-slate-800">Python (FastAPI, Flask), Node.js (basics), RESTful API Design, JSON Schema Validation, Asynchronous I/O, WebSockets</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Database:</span>
-                      <span className="text-slate-800">SQL, MySQL (basics)</span>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Version Control:</span>
-                      <span className="text-slate-800">Git, GitHub</span>
+                      <span className="font-bold text-slate-900 font-sans">Database &amp; Vectors:</span>
+                      <span className="text-slate-800">Vector Embeddings (Cosine Similarity), Semantic Chunking, SQL, MySQL</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
                       <span className="font-bold text-slate-900 font-sans">Dev Tools:</span>
-                      <span className="text-slate-800">VS Code, Chrome DevTools, Jupyter Notebook</span>
+                      <span className="text-slate-800">Git, GitHub Version Control, VS Code, Postman API Testing, Chrome DevTools, Jupyter Notebook</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Concepts:</span>
-                      <span className="text-slate-800">Object-Oriented Programming, Data Structures, Algorithms, Cross-Browser Compatibility</span>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">AI/Automation:</span>
-                      <span className="text-slate-800">Prompt Engineering (IBM certified), Python Automation, Machine Learning concepts</span>
+                      <span className="font-bold text-slate-900 font-sans">Core Concepts:</span>
+                      <span className="text-slate-800">Data Structures &amp; Algorithms, Object-Oriented Programming (OOP), Clean Architecture, Cross-Browser Compatibility</span>
                     </div>
                   </div>
                 </div>
@@ -226,17 +222,45 @@ export default function ResumeModal({ isOpen, onClose }) {
                   <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-0.5 mb-1.5 font-sans">
                     Projects
                   </h2>
-                  <div className="text-xs sm:text-sm">
-                    <div className="flex justify-between font-bold text-slate-900">
-                      <span>Student Calculator – Front-End Web Application</span>
-                      <span className="font-sans font-normal text-slate-700">2025</span>
+                  <div className="space-y-3">
+                    <div className="text-xs sm:text-sm">
+                      <div className="flex justify-between font-bold text-slate-900">
+                        <span>Agentic AI Workflow Studio – Full Stack Gen AI Platform</span>
+                        <span className="font-sans font-normal text-slate-700">2025</span>
+                      </div>
+                      <p className="text-[11px] text-slate-600 font-sans italic">Python, FastAPI, LangGraph, React.js, TailwindCSS, OpenAI/Gemini APIs</p>
+                      <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
+                        <li>Architected cyclical agent state graphs with LangGraph for planning, research, dynamic tool execution, and automated evaluation loops.</li>
+                        <li>Engineered streaming Server-Sent Events (SSE) in Python FastAPI consumed by a reactive React interface for real-time thought telemetry.</li>
+                        <li>Integrated dynamic tool-calling for web search grounding and structured data extraction.</li>
+                      </ul>
                     </div>
-                    <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
-                      <li>Developed a fully functional Student Calculator web application using HTML5, CSS3, and JavaScript</li>
-                      <li>Implemented arithmetic operations (addition, subtraction, multiplication, division) with real-time input processing using JavaScript DOM manipulation and event handling</li>
-                      <li>Designed a responsive, mobile-friendly UI with CSS3 flexbox ensuring cross-browser compatibility across Chrome, Firefox, and Edge</li>
-                      <li>Followed clean code principles with modular JavaScript functions, separation of concerns, and structured HTML semantics</li>
-                    </ul>
+
+                    <div className="text-xs sm:text-sm">
+                      <div className="flex justify-between font-bold text-slate-900">
+                        <span>Multimodal RAG Knowledge Assistant – Semantic Search</span>
+                        <span className="font-sans font-normal text-slate-700">2025</span>
+                      </div>
+                      <p className="text-[11px] text-slate-600 font-sans italic">Python, LangChain, ChromaDB, Vector Embeddings, React.js</p>
+                      <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
+                        <li>Implemented document chunking and vector storage with local ChromaDB indices for high-precision semantic search.</li>
+                        <li>Engineered hybrid keyword and cosine similarity retrieval pipelines achieving sub-200ms query latency.</li>
+                        <li>Formulated strict citation guardrails and context prompt templates, mitigating hallucinations across technical document queries.</li>
+                      </ul>
+                    </div>
+
+                    <div className="text-xs sm:text-sm">
+                      <div className="flex justify-between font-bold text-slate-900">
+                        <span>Student Calculator – Front-End Web Application</span>
+                        <span className="font-sans font-normal text-slate-700">2025</span>
+                      </div>
+                      <p className="text-[11px] text-slate-600 font-sans italic">HTML5, CSS3, Modern JavaScript, DOM Manipulation, Flexbox</p>
+                      <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
+                        <li>Developed a fully functional Student Calculator web application using HTML5, CSS3, and JavaScript with clean code separation.</li>
+                        <li>Implemented arithmetic operations with real-time input processing via JavaScript DOM manipulation and event handling.</li>
+                        <li>Designed a responsive, mobile-friendly UI with CSS3 flexbox ensuring cross-browser compatibility across Chrome, Firefox, and Edge.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 

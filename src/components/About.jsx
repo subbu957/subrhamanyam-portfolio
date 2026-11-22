@@ -11,8 +11,8 @@ export default function About({ onOpenResume }) {
 
       <SectionHeading
         kicker="About &amp; Overview"
-        title="Front-End Developer &amp; AI/ML Student"
-        description="Combining foundational AI/ML academic rigor with self-driven front-end engineering and clean code practices."
+        title="Full Stack Developer &amp; Gen AI Engineer"
+        description="Engineering end-to-end web applications driven by autonomous AI agents, RAG architectures, and modern full-stack systems."
       />
 
       {/* Quick stats highlight grid with hover lift */}

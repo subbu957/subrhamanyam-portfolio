@@ -30,7 +30,7 @@ export default function Projects() {
     setActivePreview(project)
   }
 
-  const categories = ['All', 'Web App', 'AI / Python']
+  const categories = ['All', ...new Set(projects.map((p) => p.category))]
   const displayedProjects =
     filter === 'All' ? projects : projects.filter((p) => p.category === filter)
 
@@ -42,8 +42,8 @@ export default function Projects() {
 
       <SectionHeading
         kicker="Featured Projects"
-        title="Real Projects Built &amp; Deployed"
-        description="A showcase of functional front-end applications, real-time calculations, and AI workflows."
+        title="Full Stack &amp; Gen AI Applications"
+        description="A showcase of production-ready web platforms, autonomous Gen AI multi-agent workflows, and real-time computing."
       />
 
       {/* Filter tabs */}

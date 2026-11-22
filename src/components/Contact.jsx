@@ -89,7 +89,7 @@ export default function Contact({ onOpenResume }) {
               Direct Contact Details
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-200 font-normal">
-              I am actively seeking Web Developer internships (on-site or hybrid). Feel free to reach out directly:
+              I am actively seeking Full Stack Developer &amp; Gen AI Engineer roles and internships (on-site or hybrid). Feel free to reach out directly:
             </p>
 
             {/* Email Box */}
