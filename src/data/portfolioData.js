@@ -1,19 +1,19 @@
 // ─────────────────────────────────────────────────────────────
-// Full Stack Generative AI Developer Portfolio Data
-// Subrhamanyam (B.V.S) Bhattaram
+// Subrahmanyam (B.V.S.) Bhattaram - Portfolio Data
+// Synchronized directly with Official Resume
 // ─────────────────────────────────────────────────────────────
 
 export const profile = {
-  name: 'Subrhamanyam Bhattaram',
-  fullName: 'Subrhamanyam (B.V.S) Bhattaram',
+  name: 'Subrahmanyam Bhattaram',
+  fullName: 'Subrahmanyam (B.V.S.) Bhattaram',
   initials: 'SB',
-  badge: 'Open to Full Stack Developer & Gen AI Roles',
-  openTo: 'Full Stack Developer & Gen AI Engineer – On-site & Hybrid',
+  badge: 'Open to AI/ML & Full Stack Roles',
+  openTo: 'AI/ML Engineer Internships & Entry-Level Roles (Full Stack & Gen AI)',
   roles: [
-    'Full Stack Developer & Gen AI Engineer',
-    'Generative AI & Agentic Systems Architect',
-    'React, Node & Python Full-Stack Developer',
-    'RAG & Vector Search Engineer',
+    'AI/ML Engineer & Full Stack Developer',
+    'Machine Learning Intern (Codeveda Technologies)',
+    'Python Developer Intern (Codec Technologies)',
+    'Vision Transformer & NAS Researcher',
     'Prompt Engineering Specialist (IBM Certified)'
   ],
   location: 'Nellore, Andhra Pradesh, India',
@@ -26,36 +26,36 @@ export const profile = {
   resumeUrl: '/assets/resume.pdf',
   resumeHtmlUrl: '/resume.html',
   careerObjective:
-    'B.Tech AI & ML undergraduate (2023–2027) and Full Stack Developer & Gen AI Engineer with hands-on expertise building end-to-end intelligent web platforms. Proficient in architecting autonomous multi-agent systems (LangGraph/LangChain), Retrieval-Augmented Generation (RAG), vector embeddings, and LLM APIs, integrated seamlessly with high-performance React front-ends and Python (FastAPI)/Node.js backends. Certified in IBM Prompt Engineering, YUVA AI, and Quantum Fundamentals. Seeking Full Stack Developer and Gen AI Engineer roles to build scalable, AI-powered software.',
+    'B.Tech AI & ML student (2023–2027) who builds models and ships working software. Worked on a multi-scale Vision Transformer with Neural Architecture Search for thyroid ultrasound classification, and has interned in Python development and machine learning. Works in Python, TensorFlow and Pandas, and deploys web front ends to Vercel. Seeking AI/ML Engineer internships and entry-level roles.',
   summary:
-    'Full Stack Developer & Gen AI Engineer and B.Tech AI & ML student (2023–2027). Specializes in building end-to-end web applications driven by autonomous LLM agents, RAG pipelines, vector databases, and responsive React/Tailwind user experiences with clean code architecture.',
+    'B.Tech AI & ML student (2023–2027) who builds models and ships working software. Worked on a multi-scale Vision Transformer with Neural Architecture Search for thyroid ultrasound classification, and has interned in Python development and machine learning. Works in Python, TensorFlow and Pandas, and deploys web front ends to Vercel.',
   aboutParagraphs: [
-    "I'm a B.Tech Artificial Intelligence & Machine Learning student at Narayana Engineering College (Autonomous), Nellore (2023–2027). My technical focus unites production-grade full-stack web engineering with cutting-edge Generative AI systems.",
-    "I engineer complete applications from the ground up: designing responsive React/Tailwind interfaces, building robust Python (FastAPI) and Node.js backend services, managing vector embeddings in ChromaDB, and orchestrating multi-agent reasoning loops with LangChain, LangGraph, and modern LLM APIs.",
-    "Certified in IBM Prompt Engineering, YUVA AI, and Quantum Fundamentals, and an active participant in Agentathon 2025 (world’s largest Agentic AI hackathon), I continuously explore agentic autonomy, structured LLM outputs, and real-time streaming AI interfaces."
+    "I'm a B.Tech Artificial Intelligence & Machine Learning student at Narayana Engineering College (Autonomous), Nellore (2023–2027). I specialize in building deep learning models, Vision Transformers, and shipping production-ready web software to Vercel.",
+    "My hands-on experience includes working as a Machine Learning Intern at Codeveda Technologies and Python Developer Intern at Codec Technologies (Summer 2025). On the research side, I co-developed a multi-scale Vision Transformer (ViT) with Neural Architecture Search (NAS) for thyroid ultrasound cancer diagnosis.",
+    "Certified in IBM Prompt Engineering (edX), YUVA AI, and Quantum Fundamentals, and an active participant in Agentathon 2025 (GDG Hyderabad), I actively bridge mathematical AI/ML foundations with robust web applications."
   ],
   stats: [
-    { label: 'Core Specialization', value: 'Full Stack & Gen AI', sub: 'React, FastAPI & Agents' },
     { label: 'Degree & Branch', value: 'B.Tech AI & ML', sub: '2023 – 2027' },
-    { label: 'Credentials', value: '4+ Industry Certifications', sub: 'IBM, YUVA, Qubitech' },
-    { label: 'Status', value: 'Open for Roles', sub: 'Full Stack & Gen AI' },
+    { label: 'Industry Experience', value: '2 Internships', sub: 'Codeveda & Codec Tech' },
+    { label: 'Core AI Stack', value: 'ViT, NAS & TensorFlow', sub: 'Python, Pandas, NumPy' },
+    { label: 'Status', value: 'Open for Roles', sub: 'AI/ML & Full Stack' },
   ],
   strengths: [
     {
-      title: 'Full Stack & Gen AI Architecture',
-      desc: 'Seamlessly unites modern React front-ends with Python FastAPI/Node backends, vector search, and structured LLM tool calling.'
+      title: 'Model Building & Deep Learning',
+      desc: 'Hands-on experience with Vision Transformers (ViT), Neural Architecture Search (NAS), TensorFlow, and medical image classification.'
     },
     {
-      title: 'Autonomous Agent Workflows',
-      desc: 'Designs multi-agent collaboration, cyclical graphs, self-correcting prompt chains, and human-in-the-loop systems with LangGraph.'
+      title: 'Real-World Internship Experience',
+      desc: 'Interned at Codeveda Technologies (Machine Learning) and Codec Technologies (Python Development), delivering working solutions.'
     },
     {
-      title: 'Prompt Engineering & Guardrails',
-      desc: 'IBM Certified specialist in few-shot prompting, chain-of-thought reasoning, hallucination mitigation, and JSON schemas.'
+      title: 'Full-Stack Web & Vercel Deployment',
+      desc: 'Builds responsive front-ends with HTML5, CSS3, JavaScript, React, and deploys web applications to Vercel with clean code standards.'
     },
     {
-      title: 'Clean Code & Fast Execution',
-      desc: 'Emphasizes modular codebases, semantic HTML5, responsive CSS3/Tailwind, and robust API contracts with Git version control.'
+      title: 'Prompt Engineering & Agentic AI',
+      desc: 'IBM Certified specialist in prompt engineering, few-shot prompting, and participant in Agentathon 2025 (world’s largest agentic hackathon).'
     },
   ],
   languages: [
@@ -65,168 +65,158 @@ export const profile = {
   ],
   achievements: [
     {
+      title: 'Machine Learning & Python Internships',
+      desc: 'Completed internships at Codeveda Technologies (ML Intern) and Codec Technologies (Python Developer Intern, Summer 2025).'
+    },
+    {
+      title: 'Multi-Scale ViT with NAS (Thyroid Ultrasound)',
+      desc: 'Classified thyroid nodules as benign or malignant from ultrasound images with a multi-scale Vision Transformer using Neural Architecture Search.'
+    },
+    {
       title: 'Agentathon 2025 (GDG Hyderabad)',
-      desc: 'Participated in the world’s largest Agentic AI hackathon, designing and evaluating autonomous multi-agent pipelines on modern web stacks.'
+      desc: 'Engaged with Agentathon 2025 — world’s largest Agentic AI hackathon — exploring autonomous agent architectures with modern web stacks.'
     },
     {
-      title: 'IBM Certified Prompt Engineering Specialist',
-      desc: 'Mastered systematic prompt architectures, few-shot conditioning, and LLM evaluation benchmarks through IBM via edX.'
+      title: 'IBM & Industry Certifications',
+      desc: 'Completed Introduction to Prompt Engineering (IBM via edX), YUVA AI Program, and Quantum Fundamentals Program.'
+    }
+  ],
+  experience: [
+    {
+      role: 'Machine Learning Intern',
+      org: 'Codeveda Technologies',
+      period: '2025',
+      desc: 'Applied machine learning models, data preprocessing, and evaluation pipelines in Python.'
     },
     {
-      title: 'Full Stack Gen AI Application Engineering',
-      desc: 'Built and deployed functional web platforms integrating real-time frontend interfaces with Python APIs, DOM manipulation, and AI workflows.'
-    },
-    {
-      title: 'Technical Author on LinkedIn',
-      desc: 'Publishes technical analyses on Generative AI, agent architectures, and web engineering, achieving up to 379 impressions per post.'
+      role: 'Python Developer Intern',
+      org: 'Codec Technologies',
+      period: 'Summer 2025',
+      desc: 'Built Python automation scripts, backend logic, and data handling workflows.'
     }
   ]
 }
 
 export const skills = [
   {
-    category: 'Generative AI & LLM Systems',
+    category: 'Languages',
+    iconName: 'Code2',
+    items: ['Python', 'SQL', 'JavaScript', 'C#'],
+  },
+  {
+    category: 'AI / Machine Learning',
     iconName: 'Sparkles',
     items: [
+      'TensorFlow',
+      'NumPy',
+      'Pandas',
+      'Vision Transformers (ViT)',
+      'Neural Architecture Search (NAS)',
       'Prompt Engineering (IBM Certified)',
-      'LangChain & LangGraph',
-      'RAG Architecture (Retrieval-Augmented Generation)',
-      'Vector Databases (ChromaDB / Pinecone)',
-      'OpenAI & Gemini API Integration',
-      'Autonomous Agent Workflows',
-      'Function Calling & Structured Outputs',
-      'LlamaIndex Concepts'
+      'Machine Learning Concepts',
+      'Agentic AI Workflows'
     ],
   },
   {
-    category: 'Full Stack Front-End',
+    category: 'Web & Full Stack',
     iconName: 'Layout',
     items: [
-      'React.js (Hooks, Context, State)',
-      'JavaScript (ES6+)',
-      'TailwindCSS & Glassmorphic UI',
-      'HTML5 Semantic Architecture',
-      'CSS3 & Responsive Flexbox/Grid',
-      'Streaming UI (SSE / Server-Sent Events)',
-      'DOM Manipulation & Event Handling'
+      'HTML5',
+      'CSS3',
+      'Bootstrap',
+      'ASP.NET Core',
+      'React.js (Exploring)',
+      'TailwindCSS',
+      'DOM Event Handling',
+      'Responsive Web Design'
     ],
   },
   {
-    category: 'Back-End & AI APIs',
-    iconName: 'Code2',
-    items: [
-      'Python (FastAPI, Flask)',
-      'Node.js & Express Basics',
-      'RESTful API Design & Integration',
-      'JSON Schema Validation',
-      'WebSockets & Async I/O',
-      'Python Automation & Scripting'
-    ],
-  },
-  {
-    category: 'Databases & Vector Stores',
+    category: 'Databases & Storage',
     iconName: 'Database',
-    items: [
-      'Vector Embeddings & Cosine Similarity',
-      'SQL & MySQL Relational DBs',
-      'ChromaDB Local Vector Indexing',
-      'Document Chunking & Token Optimization'
-    ],
+    items: ['MySQL', 'MongoDB Atlas', 'SQL Database Management'],
   },
   {
-    category: 'Developer Tooling & DevOps',
+    category: 'Version Control',
     iconName: 'Wrench',
-    items: [
-      'Git & GitHub Version Control',
-      'VS Code & Cursor AI Workflows',
-      'Postman API Testing',
-      'Chrome DevTools & Performance Profiling',
-      'Jupyter Notebook & Google Colab',
-      'Vercel & Cloud Deployment'
-    ],
+    items: ['Git', 'GitHub'],
   },
   {
-    category: 'Computer Science Core',
+    category: 'Dev Tools & Deployment',
     iconName: 'Cpu',
-    items: [
-      'Data Structures & Algorithms',
-      'Object-Oriented Programming (OOP)',
-      'Database Management Systems (DBMS)',
-      'Cross-Browser Compatibility & Web Security'
-    ],
+    items: ['VS Code', 'Jupyter Notebook', 'Chrome DevTools', 'Vercel Deployment'],
   },
 ]
 
 export const projects = [
   {
-    title: 'Agentic AI Workflow Studio',
-    badge: 'Flagship Gen AI Project',
+    title: 'Multi-Scale ViT with NAS – Thyroid Cancer Diagnosis',
+    badge: 'Flagship AI Research',
     year: '2025',
-    category: 'Full Stack Gen AI',
+    category: 'AI / ML',
     description:
-      'Autonomous multi-agent orchestration platform that decomposes complex user queries into self-executing sub-tasks, combining LLM reasoning, dynamic tool usage, and real-time streaming output.',
-    stack: ['Python', 'FastAPI', 'LangGraph', 'React.js', 'TailwindCSS', 'OpenAI/Gemini APIs'],
-    github: 'https://github.com/subbu957',
-    demo: 'https://subrhamanyam-portfolio.vercel.app',
-    previewUrl: null,
-    highlights: [
-      'Architected cyclical agent state graphs with LangGraph for planning, research, and self-evaluation loops',
-      'Engineered streaming Server-Sent Events (SSE) in Python FastAPI consumed by a reactive React interface',
-      'Implemented dynamic tool-calling for web search, arithmetic calculations, and structured data extraction',
-      'Designed a dark glassmorphic UI displaying real-time agent thought streams and token telemetry'
-    ],
-  },
-  {
-    title: 'Multimodal RAG Knowledge Assistant',
-    badge: 'Gen AI & Vector Search',
-    year: '2025',
-    category: 'Gen AI / Full Stack',
-    description:
-      'End-to-end full stack Retrieval-Augmented Generation application providing grounded question-answering over technical documents with dense vector embeddings and citation verification.',
-    stack: ['Python', 'LangChain', 'ChromaDB', 'React.js', 'TailwindCSS', 'Vector Embeddings'],
+      'Classified thyroid nodules as benign or malignant from ultrasound images with a multi-scale Vision Transformer, using Neural Architecture Search to select the optimal architecture.',
+    stack: ['Python', 'TensorFlow', 'Vision Transformers', 'NAS', 'NumPy', 'Pandas'],
     github: 'https://github.com/subbu957',
     demo: null,
     previewUrl: null,
     highlights: [
-      'Implemented semantic document chunking and vector storage with local ChromaDB indices',
-      'Integrated hybrid keyword and cosine similarity search to retrieve relevant source contexts with sub-200ms latency',
-      'Constructed strict guardrail prompt templates ensuring hallucinations are prevented through citation grounding',
-      'Built interactive document upload and real-time answer exploration interface in React'
+      'Classified thyroid nodules as benign or malignant from ultrasound images with a multi-scale Vision Transformer',
+      'Employed Neural Architecture Search (NAS) to discover optimal layer depth and multi-scale attention mechanisms',
+      'Built data preprocessing, normalization, and augmentation pipelines using TensorFlow and Pandas',
+      'Collaborated effectively in a team of 3 to deliver medical diagnosis classification insights'
     ],
   },
   {
-    title: 'AI Prompt Studio & Automation Platform',
-    badge: 'Gen AI & Automation',
-    year: '2025',
-    category: 'Gen AI & Python',
-    description:
-      'Systematic prompt architectures, few-shot chain-of-thought workflows, and Python automation scripts for LLM reasoning, hallucination testing, and structured data validation.',
-    stack: ['Python', 'Prompt Engineering (IBM)', 'LangChain', 'OpenAI API', 'JSON Schemas'],
-    github: 'https://github.com/subbu957',
-    demo: 'https://github.com/subbu957',
-    previewUrl: null,
-    highlights: [
-      'Developed few-shot prompt pipelines and structured JSON outputs conforming to enterprise LLM benchmarks',
-      'Engineered automated Python test harnesses to evaluate prompt hallucination rates and contextual accuracy',
-      'Integrated chain-of-thought (CoT) and self-consistency prompting methodologies based on IBM certification principles'
-    ],
-  },
-  {
-    title: 'Student Calculator – Responsive Web Application',
-    badge: 'Core Front-End',
+    title: 'Student SGPA/CGPA Calculator – Web Application',
+    badge: 'Live Demo',
     year: '2025',
     category: 'Web App',
     description:
-      'Fully functional calculator web application developed with HTML5, CSS3, and JavaScript, featuring real-time input processing and arithmetic operations.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Flexbox'],
+      'Built and deployed on Vercel a responsive calculator in HTML5, CSS3 and JavaScript, with DOM event handling, flexbox layout and semantic HTML, tested in Chrome, Firefox and Edge.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Flexbox', 'Vercel'],
     github: 'https://github.com/subbu957',
     demo: 'https://b-tech-student-calculator.vercel.app',
     previewUrl: 'https://b-tech-student-calculator.vercel.app',
     highlights: [
-      'Developed fully functional Student Calculator web app using HTML5, CSS3, and modern JavaScript',
-      'Implemented arithmetic operations (+, -, *, /) with real-time input processing via DOM manipulation & event handling',
-      'Designed responsive, mobile-friendly UI with CSS3 flexbox ensuring cross-browser compatibility',
-      'Applied clean code principles with modular JS functions and separation of concerns'
+      'Built and deployed on Vercel a responsive SGPA/CGPA calculator with real-time computation',
+      'Engineered dynamic DOM event handling and arithmetic calculations using clean vanilla JavaScript',
+      'Designed a responsive, mobile-friendly UI with CSS3 flexbox ensuring cross-browser compatibility across Chrome, Firefox, and Edge',
+      'Structured semantic HTML5 and clean CSS3 separation of concerns'
+    ],
+  },
+  {
+    title: 'Agentic AI Architecture (Agentathon 2025)',
+    badge: 'Agentic AI',
+    year: '2025',
+    category: 'AI / ML',
+    description:
+      'Multi-agent workflow and prompt engineering architectures explored during Agentathon 2025 (GDG Hyderabad), the world’s largest Agentic AI hackathon.',
+    stack: ['Python', 'Prompt Engineering (IBM)', 'Agentic AI', 'LLM Workflows'],
+    github: 'https://github.com/subbu957',
+    demo: null,
+    previewUrl: null,
+    highlights: [
+      'Participated in Agentathon 2025 (GDG Hyderabad), the world’s largest agentic-AI hackathon',
+      'Explored multi-agent collaboration, task decomposition, and dynamic tool-calling pipelines',
+      'Implemented structured prompt architectures adhering to IBM Prompt Engineering benchmarks'
+    ],
+  },
+  {
+    title: 'Modern Developer Portfolio',
+    badge: 'Live Showcase',
+    year: '2025',
+    category: 'Web App',
+    description:
+      'High-performance developer portfolio built with React, Vite, and TailwindCSS, featuring an interactive ATS resume viewer, printable CV, and responsive project showcases.',
+    stack: ['React.js', 'Vite', 'TailwindCSS', 'Framer Motion', 'Vercel'],
+    github: 'https://github.com/subbu957',
+    demo: 'https://subrhamanyam-portfolio.vercel.app',
+    previewUrl: null,
+    highlights: [
+      'Integrated live ATS resume viewer and direct PDF/print download',
+      'Built interactive project showcases with category filtering and modal previews',
+      'Engineered responsive dark-themed UI deployed continuously on Vercel'
     ],
   },
 ]
@@ -237,7 +227,7 @@ export const education = [
     location: 'Nellore, Andhra Pradesh',
     credential: 'B.Tech – Artificial Intelligence & Machine Learning',
     period: '2023 – 2027',
-    detail: 'Core coursework: Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Software Engineering, Web Technologies',
+    detail: 'Relevant coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Software Engineering, Web Technologies',
   },
   {
     school: 'Narayana Junior College',
@@ -257,33 +247,32 @@ export const certifications = [
   { name: 'Introduction to Prompt Engineering', issuer: 'IBM via edX', year: '2024' },
   { name: 'YUVA AI Program', issuer: 'YUVA', year: '2025' },
   { name: 'Quantum Fundamentals Program', issuer: 'Qubitech, WISER & Amravati Quantum Valley', year: '2025' },
-  { name: 'Sustainable Information Technology', issuer: 'Narayana Engineering College', year: '2023 – Present' },
 ]
 
 export const journey = [
   {
-    title: 'Full Stack & Gen AI Engineering Focus',
-    detail: 'Spearheading end-to-end Generative AI development: connecting modern React interfaces to Python FastAPI backends, LangGraph agents, and vector databases.',
+    title: 'Multi-Scale ViT with NAS Research',
+    detail: 'Co-developed a multi-scale Vision Transformer with Neural Architecture Search for thyroid ultrasound cancer diagnosis in a team of 3.',
+  },
+  {
+    title: 'Machine Learning Intern – Codeveda Technologies',
+    detail: 'Interned in Machine Learning, applying Python, data science, and ML algorithms to real-world tasks.',
+  },
+  {
+    title: 'Python Developer Intern – Codec Technologies',
+    detail: 'Completed a Python Developer Internship in Summer 2025, engineering scripts, automation, and backend logic.',
   },
   {
     title: 'Agentathon 2025 (GDG Hyderabad)',
-    detail: 'Participated in the world’s largest Agentic AI hackathon, designing and evaluating autonomous agent workflows on web applications.',
+    detail: 'Participated in the world’s largest Agentic AI hackathon, exploring autonomous agent architectures with modern web stacks.',
   },
   {
-    title: 'IBM Certified Prompt Engineering',
-    detail: 'Earned the IBM Prompt Engineering credential (edX), mastering few-shot architectures, chain-of-thought prompting, and LLM evaluation.',
+    title: 'Student SGPA/CGPA Calculator Deployment',
+    detail: 'Built and deployed on Vercel a responsive grade calculator in HTML5, CSS3, and JavaScript with clean DOM event handling.',
   },
   {
-    title: 'Quantum Fundamentals Program',
-    detail: 'Completed advanced Quantum Fundamentals certified by Qubitech, WISER & Amravati Quantum Valley.',
-  },
-  {
-    title: 'Front-End & Web Applications Deployment',
-    detail: 'Built and deployed responsive applications including Student Calculator and high-performance interactive portfolios with clean code principles.',
-  },
-  {
-    title: 'Technical Publishing & Community Sharing',
-    detail: 'Actively publishes technical insights on Generative AI and web systems on LinkedIn, reaching hundreds of developers and peers.',
+    title: 'IBM Prompt Engineering Certification',
+    detail: 'Earned the IBM Prompt Engineering credential (edX), mastering structured prompting, few-shot conditioning, and evaluation.',
   },
 ]
 

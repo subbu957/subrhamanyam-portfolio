@@ -11,8 +11,8 @@ export default function About({ onOpenResume }) {
 
       <SectionHeading
         kicker="About &amp; Overview"
-        title="Full Stack Developer &amp; Gen AI Engineer"
-        description="Engineering end-to-end web applications driven by autonomous AI agents, RAG architectures, and modern full-stack systems."
+        title="AI/ML Engineer &amp; Full Stack Developer"
+        description="B.Tech AI &amp; ML student who builds deep learning models, Vision Transformers, and ships working web software."
       />
 
       {/* Quick stats highlight grid with hover lift */}
@@ -48,7 +48,7 @@ export default function About({ onOpenResume }) {
                 <Compass size={18} />
               </div>
               <h3 className="font-display text-base sm:text-lg font-bold text-white tracking-wide" style={{ color: '#FFFFFF' }}>
-                Career Objective
+                Professional Summary
               </h3>
             </div>
 

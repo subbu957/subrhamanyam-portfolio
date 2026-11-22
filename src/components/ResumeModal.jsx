@@ -144,17 +144,17 @@ export default function ResumeModal({ isOpen, onClose }) {
                   </div>
 
                   <div className="mt-1.5 text-xs text-slate-600 font-sans italic">
-                    Open to: {profile.openTo}
+                    Open to: AI/ML Engineer Internships and Entry-Level Roles
                   </div>
                 </div>
 
-                {/* Career Objective */}
+                {/* Summary */}
                 <div className="mb-4">
                   <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-0.5 mb-1.5 font-sans">
-                    Career Objective
+                    Summary
                   </h2>
                   <p className="text-xs sm:text-sm text-justify text-slate-800 leading-normal">
-                    {profile.careerObjective}
+                    {profile.summary}
                   </p>
                 </div>
 
@@ -191,28 +191,41 @@ export default function ResumeModal({ isOpen, onClose }) {
                   </h2>
                   <div className="text-xs space-y-1">
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Generative AI &amp; LLMs:</span>
-                      <span className="text-slate-800">Prompt Engineering (IBM Certified), LangChain, LangGraph, RAG Architecture, Vector DBs (ChromaDB), OpenAI &amp; Gemini APIs, Function Calling, Multi-Agent Systems</span>
+                      <span className="font-bold text-slate-900 font-sans">Languages:</span>
+                      <span className="text-slate-800">Python, SQL, JavaScript, C#</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Front-End:</span>
-                      <span className="text-slate-800">React.js, JavaScript (ES6+), TailwindCSS, HTML5 Semantic UI, CSS3 Flexbox/Grid, Streaming SSE UI, DOM Manipulation</span>
+                      <span className="font-bold text-slate-900 font-sans">AI/ML:</span>
+                      <span className="text-slate-800">TensorFlow, NumPy, Pandas, Vision Transformers, Neural Architecture Search, Prompt Engineering (IBM certified)</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Back-End &amp; AI APIs:</span>
-                      <span className="text-slate-800">Python (FastAPI, Flask), Node.js (basics), RESTful API Design, JSON Schema Validation, Asynchronous I/O, WebSockets</span>
+                      <span className="font-bold text-slate-900 font-sans">Web &amp; Data:</span>
+                      <span className="text-slate-800">HTML5, CSS3, Bootstrap, ASP.NET Core, MySQL, MongoDB Atlas, exploring React.js</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Database &amp; Vectors:</span>
-                      <span className="text-slate-800">Vector Embeddings (Cosine Similarity), Semantic Chunking, SQL, MySQL</span>
+                      <span className="font-bold text-slate-900 font-sans">Version Control:</span>
+                      <span className="text-slate-800">Git, GitHub</span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
                       <span className="font-bold text-slate-900 font-sans">Dev Tools:</span>
-                      <span className="text-slate-800">Git, GitHub Version Control, VS Code, Postman API Testing, Chrome DevTools, Jupyter Notebook</span>
+                      <span className="text-slate-800">VS Code, Jupyter Notebook, Chrome DevTools, Vercel</span>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1">
-                      <span className="font-bold text-slate-900 font-sans">Core Concepts:</span>
-                      <span className="text-slate-800">Data Structures &amp; Algorithms, Object-Oriented Programming (OOP), Clean Architecture, Cross-Browser Compatibility</span>
+                  </div>
+                </div>
+
+                {/* Experience */}
+                <div className="mb-4">
+                  <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-0.5 mb-1.5 font-sans">
+                    Experience
+                  </h2>
+                  <div className="space-y-1.5 text-xs sm:text-sm">
+                    <div className="flex justify-between font-bold text-slate-900">
+                      <span>Machine Learning Intern – Codeveda Technologies</span>
+                      <span className="font-sans font-normal text-slate-700"></span>
+                    </div>
+                    <div className="flex justify-between font-bold text-slate-900">
+                      <span>Python Developer Intern – Codec Technologies</span>
+                      <span className="font-sans font-normal text-slate-700">Summer 2025</span>
                     </div>
                   </div>
                 </div>
@@ -225,40 +238,21 @@ export default function ResumeModal({ isOpen, onClose }) {
                   <div className="space-y-3">
                     <div className="text-xs sm:text-sm">
                       <div className="flex justify-between font-bold text-slate-900">
-                        <span>Agentic AI Workflow Studio – Full Stack Gen AI Platform</span>
-                        <span className="font-sans font-normal text-slate-700">2025</span>
+                        <span>Multi-Scale ViT with NAS – Thyroid Cancer Diagnosis from Ultrasound</span>
+                        <span className="font-sans font-normal text-slate-700">Team of 3</span>
                       </div>
-                      <p className="text-[11px] text-slate-600 font-sans italic">Python, FastAPI, LangGraph, React.js, TailwindCSS, OpenAI/Gemini APIs</p>
                       <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
-                        <li>Architected cyclical agent state graphs with LangGraph for planning, research, dynamic tool execution, and automated evaluation loops.</li>
-                        <li>Engineered streaming Server-Sent Events (SSE) in Python FastAPI consumed by a reactive React interface for real-time thought telemetry.</li>
-                        <li>Integrated dynamic tool-calling for web search grounding and structured data extraction.</li>
+                        <li>Classified thyroid nodules as benign or malignant from ultrasound images with a multi-scale Vision Transformer, using Neural Architecture Search to select the architecture</li>
                       </ul>
                     </div>
 
                     <div className="text-xs sm:text-sm">
                       <div className="flex justify-between font-bold text-slate-900">
-                        <span>Multimodal RAG Knowledge Assistant – Semantic Search</span>
+                        <span>Student SGPA/CGPA Calculator – Web Application (Live demo)</span>
                         <span className="font-sans font-normal text-slate-700">2025</span>
                       </div>
-                      <p className="text-[11px] text-slate-600 font-sans italic">Python, LangChain, ChromaDB, Vector Embeddings, React.js</p>
                       <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
-                        <li>Implemented document chunking and vector storage with local ChromaDB indices for high-precision semantic search.</li>
-                        <li>Engineered hybrid keyword and cosine similarity retrieval pipelines achieving sub-200ms query latency.</li>
-                        <li>Formulated strict citation guardrails and context prompt templates, mitigating hallucinations across technical document queries.</li>
-                      </ul>
-                    </div>
-
-                    <div className="text-xs sm:text-sm">
-                      <div className="flex justify-between font-bold text-slate-900">
-                        <span>Student Calculator – Front-End Web Application</span>
-                        <span className="font-sans font-normal text-slate-700">2025</span>
-                      </div>
-                      <p className="text-[11px] text-slate-600 font-sans italic">HTML5, CSS3, Modern JavaScript, DOM Manipulation, Flexbox</p>
-                      <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs text-slate-800 text-justify">
-                        <li>Developed a fully functional Student Calculator web application using HTML5, CSS3, and JavaScript with clean code separation.</li>
-                        <li>Implemented arithmetic operations with real-time input processing via JavaScript DOM manipulation and event handling.</li>
-                        <li>Designed a responsive, mobile-friendly UI with CSS3 flexbox ensuring cross-browser compatibility across Chrome, Firefox, and Edge.</li>
+                        <li>Built and deployed on Vercel a responsive calculator in HTML5, CSS3 and JavaScript, with DOM event handling, flexbox layout and semantic HTML, tested in Chrome, Firefox and Edge</li>
                       </ul>
                     </div>
                   </div>
@@ -287,22 +281,8 @@ export default function ResumeModal({ isOpen, onClose }) {
                     Achievements &amp; Activities
                   </h2>
                   <ul className="list-disc list-inside space-y-0.5 text-xs text-slate-800">
-                    <li>Built and deployed a front-end web application (Student Calculator) demonstrating proficiency in HTML5, CSS3, and JavaScript</li>
-                    <li>Engaged with Agentathon 2025 (GDG Hyderabad) – world’s largest Agentic AI hackathon – exploring AI integration with web platforms</li>
-                    <li>Published technical content on LinkedIn on web and AI technologies – achieving up to 379 impressions per post</li>
-                    <li>Completed 3 industry certifications (IBM, YUVA, Qubitech) alongside full-time B.Tech coursework</li>
-                  </ul>
-                </div>
-
-                {/* Strengths */}
-                <div className="mb-4">
-                  <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-0.5 mb-1.5 font-sans">
-                    Strengths
-                  </h2>
-                  <ul className="list-disc list-inside space-y-0.5 text-xs text-slate-800">
-                    <li><strong>Fluent English communication</strong> – clearly articulates technical concepts in written and spoken form for team collaboration</li>
-                    <li><strong>Fast self-learner</strong> – independently acquired front-end web development skills alongside B.Tech AI &amp; ML coursework</li>
-                    <li><strong>Detail-oriented</strong> – applies clean code, semantic HTML, and structured CSS practices to every project</li>
+                    <li>Participated in Agentathon 2025 (GDG Hyderabad), a large agentic-AI hackathon</li>
+                    <li>Published technical posts on LinkedIn about web and AI technologies</li>
                   </ul>
                 </div>
 
